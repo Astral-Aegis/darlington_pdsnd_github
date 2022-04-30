@@ -183,6 +183,14 @@ def user_stats(df):
     print('-'*40)
 
 def view_more_data(df):
+    """Prompts Users to view raw stats on bikeshare data 
+
+    (str) more = prompts users to enter Yes or No input to see more data.
+    args:
+
+        Y = Yes. Displays the first five lines of raw data on bike share database.
+        N = No to viewing more stats. terminates view_more_data function"""
+
     while True:
         more= input("Would you like to view 5 lines of raw data? Type 'Y' or 'N': ").upper()
         if more == 'Y':
@@ -195,7 +203,12 @@ def view_more_data(df):
             break
         else:
             print("Please enter a valid response..")
-    if  more== 'Y':       
+            
+    if  more== 'Y':   
+        """This block Asks for input to display five(5) more additional lines of data. Runs only if input from previous block was Y
+        Y = displays 5 additional lines
+        N = terminates the function"""    
+
             while True:
                 more_view = input("Would you like to view more trip data? Type 'Y' or 'N' : ").upper()
                 if more_view == 'Y':
