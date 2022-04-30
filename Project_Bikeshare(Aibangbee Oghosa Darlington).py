@@ -15,6 +15,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
+
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
@@ -80,24 +81,24 @@ def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
+    
     start_time = time.time()
     
-
     # TO DO: display the most common month
+
     most_month = df['month'].value_counts().idxmax()
     print ('Most common month is {}'.format(most_month))
 
     # TO DO: display the most common day of week
+
     most_day = df['day_of_week'].value_counts().idxmax()
     print ('Most common day of week is {}'.format(most_day))
-     
-
 
     # TO DO: display the most common start hour
+
     df['hour'] = df['Start Time'].dt.hour
     most_hour = df['hour'].value_counts().idxmax()
     print ('Most common hour of day is {}'.format(most_hour))
-
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -124,7 +125,6 @@ def station_stats(df):
     com_comb_station = df['comb_station'].mode()[0]
     print (' Most common combination of Station used is {}'.format(com_comb_station))
     
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -138,7 +138,6 @@ def trip_duration_stats(df):
     # TO DO: display total travel time
     total_time = df['Trip Duration'].sum()
     print ('Total time of Travel is {}'.format(total_time))
-
 
     # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
@@ -161,6 +160,7 @@ def user_stats(df):
 
     # TO DO: Display counts of gender
     #Because the 'Gender and 'Birth Year' columns contain missing values (NaN)s and so we use a try function block to manage the Key Errors
+
     try:
         gender_count = df['Gender'].value_counts()
         print('The Gender types and their counts are: \n {}'.format(gender_count))
@@ -169,6 +169,7 @@ def user_stats(df):
 
 
     # TO DO: Display earliest, most recent, and most common year of birth
+
     try:
         earliest_YOB = df['Birth Year'].min()
         recent_YOB = df['Birth Year'].max()
@@ -193,7 +194,7 @@ def view_more_data(df):
         elif more == 'N':
             break
         else:
-            print("Please enter a valid response")
+            print("Please enter a valid response..")
     if  more== 'Y':       
             while True:
                 more_view = input("Would you like to view more trip data? Type 'Y' or 'N' : ").upper()
