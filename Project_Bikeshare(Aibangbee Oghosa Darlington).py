@@ -222,6 +222,7 @@ def view_more_data(df):
 
 
 def main():
+    """Function call block"""
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
