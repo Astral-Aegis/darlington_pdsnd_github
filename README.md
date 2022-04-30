@@ -13,4 +13,4 @@ This project uses the Python programming language and its tools to explore the d
 Files Used include: Project_Bikeshare(Aibangbee Oghosa Darlington).py, chicago.csv, new_york_city.csv and washington.csv
 
 ### Credits
-Credits: 1. Wes McKinney - Python for Data Analysis Data Wrangling with Pandas, NumPY and IPython -O'Reilly(2017) 2. W3schools.com
+Credits: 1. Wes McKinney - Python for Data Analysis Data Wrangling with Pandas, NumPY and IPython -O'Reilly(2017) 2. W3schools.com 3. pandas.pydata.org
